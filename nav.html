@@ -1,0 +1,122 @@
+<!-- Navbar -->
+<header x-data="{ open: false, active: 'home' }" class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+
+      <!-- Left: Logo -->
+      <div class="flex-shrink-0">
+        <a href="#" class="text-3xl font-bold text-indigo-600">
+          BrandLogo
+        </a>
+      </div>
+
+      <!-- Center: Desktop Nav Links -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" @click="active = 'home'" class="relative text-gray-700 text-lg font-medium transition duration-300"
+          :class="active === 'home' ? 'text-indigo-600' : 'hover:text-indigo-600'">
+          Home
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300"
+            :class="active === 'home' ? 'w-full' : 'group-hover:w-full'"></span>
+        </a>
+        <a href="about.html" @click="active = 'about'" class="relative text-gray-700 text-lg font-medium transition duration-300"
+          :class="active === 'about' ? 'text-indigo-600' : 'hover:text-indigo-600'">
+          About
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300"
+            :class="active === 'about' ? 'w-full' : 'group-hover:w-full'"></span>
+        </a>
+        <a href="event.html" @click="active = 'events'"
+          class="relative text-gray-700 text-lg font-medium transition duration-300"
+          :class="active === 'events' ? 'text-indigo-600' : 'hover:text-indigo-600'">
+          Events
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300"
+            :class="active === 'events' ? 'w-full' : 'group-hover:w-full'"></span>
+        </a>
+        <a href="gallery.html" @click="active = 'gallery'"
+          class="relative text-gray-700 text-lg font-medium transition duration-300"
+          :class="active === 'gallery' ? 'text-indigo-600' : 'hover:text-indigo-600'">
+          Gallery
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300"
+            :class="active === 'gallery' ? 'w-full' : 'group-hover:w-full'"></span>
+        </a>
+        <a href="contact.html" @click="active = 'contact'"
+          class="relative text-gray-700 text-lg font-medium transition duration-300"
+          :class="active === 'contact' ? 'text-indigo-600' : 'hover:text-indigo-600'">
+          Contact
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300"
+            :class="active === 'contact' ? 'w-full' : 'group-hover:w-full'"></span>
+        </a>
+      </nav>
+
+      <!-- Right: Desktop Buttons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="login.html" class="text-gray-700 font-medium text-lg hover:text-indigo-600 transition duration-300">
+          Login
+        </a>
+        <a href="new-member.html"
+          class="bg-indigo-600 px-4 text-white  text-lg  font-medium py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-sm">
+          New Member
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button @click="open = !open" class="text-gray-700 focus:outline-none">
+          <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+
+          <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" x-transition class="md:hidden bg-white border-t border-gray-100 shadow-sm">
+    <div class="px-4 pt-4 pb-6 space-y-4">
+
+      <a href="index.html" @click="active = 'home'; open = false" class="block text-gray-700 font-medium"
+        :class="active === 'home' ? 'text-indigo-600' : 'hover:text-indigo-600'">Home</a>
+      <a href="about.html" @click="active = 'about'; open = false" class="block text-gray-700 font-medium"
+        :class="active === 'about' ? 'text-indigo-600' : 'hover:text-indigo-600'">About</a>
+      <a href="event.html" @click="active = 'events'; open = false" class="block text-gray-700 font-medium"
+        :class="active === 'events' ? 'text-indigo-600' : 'hover:text-indigo-600'">Events</a>
+      <a href="gallery.html" @click="active = 'gallery'; open = false" class="block text-gray-700 font-medium"
+        :class="active === 'gallery' ? 'text-indigo-600' : 'hover:text-indigo-600'">Gallery</a>
+      <a href="contact.html" @click="active = 'contact'; open = false" class="block text-gray-700 font-medium"
+        :class="active === 'contact' ? 'text-indigo-600' : 'hover:text-indigo-600'">Contact</a>
+
+      <div class="pt-4 border-t border-gray-200">
+        <a href="login.html" class="block py-2 text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="new-member.html" class="block mt-2 bg-indigo-600 text-white text-center px-4 py-2 rounded-lg hover:bg-indigo-700">New
+          Member</a>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('navbar', () => ({
+      active: '',
+      init() {
+        const currentPath = window.location.pathname.split('/').pop();
+        const routes = {
+          'index.html': 'home',
+          'about.html': 'about',
+          'event.html': 'events',
+          'gallery.html': 'gallery',
+          'contact.html': 'contact'
+        };
+        this.active = routes[currentPath] || 'home';
+      }
+    }));
+  });
+</script>

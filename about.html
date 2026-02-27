@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="navigation"></div>
+    <main>
+        <section class="py-16 bg-indigo-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 space-y-4">
+                <p class="uppercase text-yellow-400 text-center tracking-[.25em]">Our Story</p>
+                <h1 class="uppercase text-5xl font-bold text-center text-white">About THE ASSOCIATION</h1>
+            </div>
+        </section>
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
+            <div class="flex flex-col justify-between items-center">                
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold uppercase">Our Journey</h3>
+                        <div class="w-16 h-1 bg-indigo-600 rounded-full"></div>
+                        <div class="space-y-8 text-gray-700 text-lg">
+                            <p>Established in 2015, Namakkal Chess Academy began with a vision to make chess accessible
+                                to every child in Namakkal. What started as a small coaching center with just 10
+                                students has grown into the district's premier chess training institution.</p>
+                            <p>Our founder, GM Rajesh Kumar, envisioned a place where strategy meets passion, and
+                                discipline meets creativity — producing not just chess champions, but sharp-minded
+                                individuals ready for life's challenges.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold uppercase">Vision & Mission</h3>
+                        <div class="w-16 h-1 bg-indigo-600 rounded-full"></div>
+                        <div class="space-y-8 text-gray-700 text-lg">
+                            <p><span class="font-bold">Vision:</span> To be South India's leading chess academy, producing nationally and internationally ranked players.</p>
+                            <p><span class="font-bold">Mission:</span>To provide world-class chess education through structured curricula, experienced coaches, and a competitive yet supportive environment for all aspiring players.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+</body>
+<script>
+    $(function () {
+      $("#navigation").load("nav.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</html>
